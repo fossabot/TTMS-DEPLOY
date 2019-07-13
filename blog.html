@@ -1,0 +1,77 @@
+<html>
+
+<head>
+	<title>Trap Team Blog</title>
+	<style>
+		body,
+		html {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			border: none;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		iframe {
+			width: 100%; // set your width here
+			height: 100%;
+			border: none;
+		}
+	</style>
+	<script>
+		!function () {
+			var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+				analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
+				analytics.load("gqbaHuIC0OV4lpzJiKF4pOdrJRIop365");
+				analytics.page();
+			}
+		}();
+	</script>
+	<script>
+		analytics.page(document.title);
+	</script>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="images/logo.png">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<iframe src="//trapteam690333707.wordpress.com/" height="100%" id='frame'></iframe>
+		<script>
+			// This is the "Offline page" service worker
+
+			// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+			// Check compatibility for the browser we're running this in
+			if ("serviceWorker" in navigator) {
+				if (navigator.serviceWorker.controller) {
+					console.log("[PWA Builder] active service worker found, no need to register");
+				} else {
+					// Register the service worker
+					navigator.serviceWorker
+						.register("pwabuilder-sw.js", {
+							scope: "./"
+						})
+						.then(function (reg) {
+							console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+						});
+				}
+			}
+
+		</script>
+		<script async>
+			function getdatatc() {
+				console.error();
+			var iframe = document.querySelector('#frame');
+			var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+			var iframeContent = iframeDocument.querySelector('body');
+			console.log(iframeContent);
+			}
+			    window.addEventListener("load", getdatatc);
+		</script>
+</body>
+
+</html>
